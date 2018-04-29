@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 //sh 'which aws'
+                sh 'pip'
                 sh 'ls /usr/bin'
                 sh 'ant -f test.xml -v'
             }
