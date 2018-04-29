@@ -5,14 +5,14 @@ pipeline {
         stage('Unit Tests') {
             steps {
                 echo 'Testing..'
-                //sh 'ant -f test.xml -v'
+                sh 'ant -f test.xml -v'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building..'
-                //sh 'ant'
-                //sh 'ant -f build.xml -v'
+                sh 'ant'
+                sh 'ant -f build.xml -v'
             }
         }
         stage('Deploy') {
