@@ -17,6 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'aws s3 cp dist/rectangle-${BUILD_NUMBER}.jar s3://assignment-10/rectangle-${BUILD_NUMBER}.jar'
             }
         }
         stage('Report') {
