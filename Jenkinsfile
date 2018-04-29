@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'JenkinsSlave'}
+    agent {label 'a0ebf93d9816'}
     
     stages {
         stage('Unit Tests') {
