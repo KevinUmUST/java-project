@@ -1,14 +1,11 @@
 pipeline {
-    agent any
-
+    agent {label 'JenkinsSlave'}
+    
     stages {
         stage('Unit Tests') {
             steps {
                 echo 'Testing..'
                 //sh 'which aws'
-                sh 'curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"'
-                sh 'pip'
-                
                 sh 'ls /usr/bin'
                 sh 'ant -f test.xml -v'
             }
