@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    stage('Unit Tests') {
-        steps {
-            echo 'Testing..'
-            //sh 'ant -f test.xml -v'
-        }
-    }
     stages {
+        stage('Unit Tests') {
+            steps {
+                echo 'Testing..'
+                //sh 'ant -f test.xml -v'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building..'
