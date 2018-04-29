@@ -5,7 +5,7 @@ pipeline {
         stage('Unit Tests') {
             steps {
                 echo 'Testing..'
-                sh 'which aws'
+                //sh 'which aws'
                 sh 'ls /usr/bin'
                 sh 'ant -f test.xml -v'
             }
